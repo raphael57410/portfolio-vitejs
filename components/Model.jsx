@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { ContactShadows, Environment, Float, PresentationControls, Text } from "@react-three/drei";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,Suspense } from "react";
 import { useControls } from "leva";
 import Computer from './Computer.jsx';
 
@@ -45,12 +45,14 @@ export const Model = () => {
             rotation={ [ - 0.1, Math.PI, 0 ] }
             position={ [ 0, 0.55, - 1.15 ] }
           />
-          <Computer
-            scale={ zoomNumber }
-            position-y={ position.y }
-            position-x={ position.x }
-            position-z={ position.z }
-          />
+          <Suspense fallback={<Text font={"./fonts/bangers.woff"} fontSize={0.5}>Chargement!!</Text>}>
+            <Computer
+              scale={ zoomNumber }
+              position-y={ position.y }
+              position-x={ position.x }
+              position-z={ position.z }
+            />
+          </Suspense>
           <Text
             font={"./fonts/bangers.woff"}
             fontSize={0.5}
