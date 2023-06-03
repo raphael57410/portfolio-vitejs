@@ -56,11 +56,11 @@ export default function Computer(props) {
       <Html
         transform
         wrapperClass={"htmlScreen"}
-        distanceFactor={ 1.17 }
-        position={ [ 0, 1.52, -1.4 ] }
-        rotation-x={ -0.256 }
+        distanceFactor={1.17}
+        position={[0, 1.52, -1.4]}
+        rotation-x={-0.256}
       >
-        <iframe src="https://demmerle-raphael.vercel.app/" />
+        {/* <iframe src="https://demmerle-raphael.vercel.app/" /> */}
       </Html>
     </group>
   )
