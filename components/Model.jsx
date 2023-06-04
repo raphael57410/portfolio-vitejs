@@ -25,7 +25,7 @@ export const Model = () => {
         setZoomNumber(2)
       }
     }}>
-      <Environment preset='city' />
+      <Environment preset='sunset' />
 
       <color args={ ['#695b5b'] } attach='background' />
 
